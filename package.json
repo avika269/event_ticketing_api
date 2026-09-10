@@ -2,9 +2,10 @@
   "name": "event_ticketing_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/avika269/event_ticketing_api/issues"
   },
@@ -21,7 +21,6 @@
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "espress": "^0.0.0",
     "express": "^5.2.1",
     "mysql2": "^3.24.4"
   },
