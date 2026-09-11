@@ -2,7 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import routes from './routes/event.routes.js';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
+import { db } from "../config/db.js";
+import errorMiddleware from "./middleware/error.middleware.js";
 
 dotenv.config();
 

@@ -1,9 +1,19 @@
-import express from 'express';
+const express = require("express");
 
-const route = express.Router();
+const {
+    createEvent,
+    getAllEvents,
+    getEventById,
+    updateEvent,
+    deleteEvent
+} = require("../controllers/eventController");
 
-route.get('/',(req,res)=>{
-  res.send('sever is running');
-});
+const router = express.Router();
 
-export default route;
+router.post("/", createEvent);
+router.get("/", getAllEvents);
+router.get("/:id", getEventById);
+router.patch("/:id", updateEvent);
+router.delete("/:id", deleteEvent);
+
+module.exports = router;
